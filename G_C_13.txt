@@ -86,3 +86,34 @@ int main()
 
     return 0;
 }
+
+
+This code implements breadth-first search (BFS) and depth-first search (DFS) traversal algorithms on a graph represented by an adjacency matrix.
+
+Here's a brief explanation of the code:
+
+1. The code defines various variables including `cost` for the adjacency matrix, `qu` for the queue used in BFS, `stk` for the stack used in DFS, and arrays `visit`, `visited`, `visit1`, and `visited1` to keep track of visited vertices.
+
+2. The main function prompts the user to enter the number of vertices and edges in the graph.
+
+3. It then asks the user to enter the edges of the graph by specifying the vertices connected by each edge.
+
+4. The adjacency matrix is constructed based on the user's input.
+
+5. The adjacency matrix is displayed on the console.
+
+6. The user is prompted to enter the initial vertex for BFS traversal.
+
+7. BFS traversal is performed starting from the initial vertex. It uses a queue to process vertices in a breadth-first manner. The visited vertices are marked using the `visited` array.
+
+8. The BFS traversal sequence is displayed on the console.
+
+9. The user is prompted to enter the initial vertex for DFS traversal.
+
+10. DFS traversal is performed starting from the initial vertex. It uses a stack to process vertices in a depth-first manner. The visited vertices are marked using the `visited1` array.
+
+11. The DFS traversal sequence is displayed on the console.
+
+12. The program ends.
+
+Please note that this code assumes the graph is undirected and does not consider weights/costs associated with edges. It also assumes that the vertices are numbered from 0 to n-1.
