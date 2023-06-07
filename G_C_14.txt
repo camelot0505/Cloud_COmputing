@@ -146,9 +146,6 @@ void adjmatlist::displaya()
                             temp=temp->next;  }
                             
                          }
-
-                  
-
          
        }
 }
@@ -181,3 +178,26 @@ int main()
     }
     return 0;
 }  
+
+
+This code implements a graph representation using both an adjacency matrix and an adjacency list. The graph represents cities and their connections, along with the time required to travel between them.
+
+Here's a brief explanation of the code:
+
+1. The code defines a structure `node` to represent a node in the adjacency list. Each node contains the name of the vertex (city), the time required to reach the vertex from the current city, and a pointer to the next node.
+
+2. The class `adjmatlist` represents the adjacency matrix and adjacency list operations. It has private member variables including the adjacency matrix `m`, the number of cities `n`, an array of city names `v`, and an array of pointers to the head of each adjacency list `head`.
+
+3. The `getgraph()` function allows the user to input the graph data. It asks for the number of cities and their names. Then, it prompts the user to enter whether a path is present between each pair of cities and the time required to travel between them. Based on the user's input, the adjacency matrix `m` is populated.
+
+4. The `adjlist()` function converts the adjacency matrix representation to an adjacency list representation. It iterates over each vertex and checks for non-zero entries in the corresponding row of the adjacency matrix. For each non-zero entry, a new node is created and added to the adjacency list of the current vertex.
+
+5. The `displaym()` function displays the adjacency matrix on the console.
+
+6. The `displaya()` function displays the adjacency list on the console. It iterates over each vertex and its corresponding adjacency list, printing the vertices connected to each vertex along with the time required to travel between them.
+
+7. In the `main()` function, a `adjmatlist` object `a` is created. It presents a menu to the user with options to enter the graph, display the adjacency matrix, display the adjacency list, or exit the program. Based on the user's choice, the corresponding member function of the `adjmatlist` class is called.
+
+8. The menu loop continues until the user chooses to exit the program.
+
+Please note that this code assumes that the graph is an undirected graph, and the adjacency matrix is symmetric. Also, the maximum number of cities is limited to 20 in this implementation.
